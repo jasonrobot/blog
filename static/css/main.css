@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+#header {
+    color: #bbb;
+    background-color: #444;
+    padding: 1em 2em;
+    position: sticky;
+}
+
+#header .title {
+    font-family: monospace;
+    font-size: 40px;
+}

@@ -8,7 +8,8 @@
         :jasonrobot.markdown
         :datafly
         :sxql
-        :cl-markup)
+        :cl-markup
+        :cl21.re)
   ;; (:import-from :jasonrobot.markdown
                 ;; :render-md)
   (:export :*web*))
@@ -36,6 +37,10 @@
 
 (defroute "/test-page" ()
   (render-cl-markup "test-page.lisp"))
+
+(defroute "/post/:name" (&key name)
+  (render-cl-markup (merge-pathnames (format nil "../posts/~a.lisp" name))))
+
 
 ;;
 ;; Error pages

@@ -7,4 +7,5 @@
    (:br)
    "Probably this will be wrapped by some post metadata too")
   (:h2 "D O G G O")
-  (:img :src "https://images.wagwalkingweb.com/media/articles/care/why-is-my-dog-yawning-and-licking-his-lips/why-is-my-dog-yawning-and-licking-his-lips.jpg"))
+  (:img :src "https://media3.s-nbcnews.com/j/streams/2013/august/130807/6c8551547-130807-yawning-puppy-4x3-309p.nbcnews-ux-2880-1000.jpg"
+        :height "200px"))

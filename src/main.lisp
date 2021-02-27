@@ -1,6 +1,6 @@
 (in-package :cl21-user)
 (defpackage jasonrobot
-  (:use :cl)
+  (:use :cl21)
   (:import-from :jasonrobot.config
                 :config)
   (:import-from :clack

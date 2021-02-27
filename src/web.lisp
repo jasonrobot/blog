@@ -1,15 +1,15 @@
-(in-package :cl21-user)
+(in-package :cl-user)
 (defpackage jasonrobot.web
   (:use :cl
+        :cl
         :caveman2
         :jasonrobot.config
         :jasonrobot.view
         :jasonrobot.db
         :jasonrobot.markdown
-        :datafly
-        :sxql
-        :cl-markup
-        :cl21.re)
+        ;; :datafly
+        ;; :sxql
+        :cl-markup)
   ;; (:import-from :jasonrobot.markdown
                 ;; :render-md)
   (:export :*web*))
@@ -40,7 +40,7 @@
 
 (defroute "/post/:name" (&key name)
   (render-cl-markup (merge-pathnames (format nil "../posts/~a.lisp" name))))
-
+  ;; (render-cl-markup (merge-pathnames #"../posts/${name}.lisp")))
 
 ;;
 ;; Error pages

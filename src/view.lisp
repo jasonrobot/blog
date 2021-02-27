@@ -1,4 +1,4 @@
-(in-package :cl21-user)
+(in-package :cl-user)
 (defpackage jasonrobot.view
   (:use :cl
         :cl-markup)
@@ -31,12 +31,16 @@
    (list
     :body
     header
+    (render-post-directory)
     content)))
 
 (defun render-post-directory ()
-  (:ul
-   (map (lm (file) `(:li (:a :href ,file)))
-        (directory "posts/*.lisp"))))
+  (let ((links (mapcar (lambda (x) `(:li (:a :href ,(pathname-name x) ,(pathname-name x))))
+                       (directory "../posts/*.lisp"))))
+    `(:ul
+      ,@links)))
+  ;; (print (directory "../posts/*.lisp"))
+  ;; '(:div "done"))
 
 (defun render-json (object)
   (setf (getf (response-headers *response*) :content-type) "application/json")

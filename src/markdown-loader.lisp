@@ -1,6 +1,6 @@
 (in-package :cl21-user)
 (defpackage jasonrobot.markdown
-  (:use :cl
+  (:use :cl21
         :cl-markdown)
   (:import-from :cl-markdown
                 :markdown)

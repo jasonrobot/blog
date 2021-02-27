@@ -1,6 +1,6 @@
 (in-package :cl21-user)
 (defpackage jasonrobot.config
-  (:use :cl)
+  (:use :cl21)
   (:import-from :envy
                 :config-env-var
                 :defconfig)

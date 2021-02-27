@@ -1,4 +1,4 @@
-(in-package :cl21-user)
+(in-package :cl)
 (defpackage jasonrobot.db
   (:use :cl)
   (:import-from :jasonrobot.config
